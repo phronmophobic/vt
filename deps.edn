@@ -1,0 +1,9 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.3"}
+
+        org.clojure/clojurescript {:mvn/version "1.10.520"}
+        org.clojure/test.check {:mvn/version "0.9.0"}
+        org.clojure/core.match {:mvn/version "0.3.0-alpha5"}
+        cljsjs/nodejs-externs {:mvn/version "1.0.4-1"}
+        doo/doo {:mvn/version "0.1.8"}
+        prismatic/schema {:mvn/version "1.1.6"}}}
