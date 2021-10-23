@@ -447,7 +447,9 @@
          inputs inputs]
     (if-let [input (first inputs)]
       (let [[new-parser-state actions] (parser/parse parser-state input)]
-          (recur (execute-actions vt actions input) new-parser-state (rest inputs)))
+        (if actions
+          (recur (execute-actions vt actions input) new-parser-state (rest inputs))
+          (recur vt parser-state (rest inputs))))
       (assoc vt :parser-state parser-state))))
 
 (defn feed-one [vt input]
