@@ -6,4 +6,10 @@
         org.clojure/core.match {:mvn/version "0.3.0-alpha5"}
         cljsjs/nodejs-externs {:mvn/version "1.0.4-1"}
         doo/doo {:mvn/version "0.1.8"}
-        prismatic/schema {:mvn/version "1.1.6"}}}
+        prismatic/schema {:mvn/version "1.1.6"}}
+ :aliases
+ {:jar {:extra-deps {com.github.seancorfield/depstar {:mvn/version "2.1.303"}}
+        :exec-fn hf.depstar/jar
+        :exec-args {:jar "vt.jar"}}
+  :deploy {:extra-deps {slipset/deps-deploy {:mvn/version "0.2.0"}}
+           :main-opts ["-m" "deps-deploy.deps-deploy" "deploy" "vt.jar"]}}}
