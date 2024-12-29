@@ -394,7 +394,13 @@
                     0x6d execute-sgr
                     0x70 execute-decstr
                     0x72 execute-decstbm
-                    nil)]
+
+                    ;; else
+                    (do
+                      ;; (prn "unrecognized" input)
+                      nil)
+                    ;;nil
+                    )]
     (action vt)
     vt))
 
@@ -425,7 +431,7 @@
    :collect collect
    :esc-dispatch esc-dispatch
    :ignore ignore
-   :csi-dispatch csi-dispatch
+   :csi-dispatch #'csi-dispatch
    :param param
    :hook hook
    :put put
