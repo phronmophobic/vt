@@ -431,7 +431,7 @@
    :collect collect
    :esc-dispatch esc-dispatch
    :ignore ignore
-   :csi-dispatch #'csi-dispatch
+   :csi-dispatch csi-dispatch
    :param param
    :hook hook
    :put put
